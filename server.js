@@ -1,5 +1,7 @@
 import {rps} from "./lib/rpsls.js";
 import {rpsls} from "./lib/rpsls.js";
+import {rpsDef} from "./lib/rpsls.js";
+import {rpslsDef} from "./lib/rpsls.js";
 import minimist from "minimist";
 import express from "express";
 
@@ -18,11 +20,11 @@ app.get('/app', (req, res) => {
 })
 
 app.get('/app/rps/', (req, res) => {
-    res.status(200).send(JSON.stringify(rps()));
+    res.status(200).send(JSON.stringify(rpsDef()));
 })
 
 app.get('/app/rpsls/', (req, res) => {
-    res.status(200).send(JSON.stringify(rpsls()));
+    res.status(200).send(JSON.stringify(rpslsDef()));
 })
 
 app.get('/app/rps/play', (req, res) => {
